@@ -13,7 +13,6 @@ class PDFProcessor:
         )
 
     def extract_text_from_pdf(self, pdf_path: str) -> str:
-        """Extract text from a PDF file."""
         reader = PdfReader(pdf_path)
         text = ""
         for page in reader.pages:
@@ -21,7 +20,6 @@ class PDFProcessor:
         return text
 
     def process_pdf(self, pdf_path: str) -> List[str]:
-        """Process a PDF file and return chunks of text."""
         text = self.extract_text_from_pdf(pdf_path)
         chunks = self.text_splitter.split_text(text)
         return chunks

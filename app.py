@@ -60,4 +60,7 @@ def query():
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    # Get port from environment variable or use default
+    port = int(os.environ.get('PORT', 5000))
+    # Run the app on all available interfaces
+    app.run(host='0.0.0.0', port=port, debug=False) 
