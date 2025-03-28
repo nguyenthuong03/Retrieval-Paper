@@ -1,4 +1,4 @@
-# Thuong Research - AI Research Paper Assistant
+# PaperMind - AI Research Paper Assistant
 
 PaperMind is an intelligent chatbot system designed to help researchers and students analyze scientific papers using advanced AI technology. Built with RAG (Retrieval Augmented Generation) and powered by large language models, PaperMind provides accurate and contextual responses to questions about research papers.
 

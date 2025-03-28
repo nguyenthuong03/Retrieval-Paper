@@ -8,7 +8,6 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True,tor
 
 class LLMHandler:
     def __init__(self):
-        # Khởi tạo Mistral 7B Instruct model
         self.tokenizer = tokenizer
         self.model = model
     
@@ -25,9 +24,8 @@ Based on the given context, please provide a detailed and accurate answer to the
         inputs = self.tokenizer(prompt, return_tensors="pt", add_special_tokens=True).to(self.model.device)
         outputs = self.model.generate(
             inputs.input_ids, 
-            max_length=1000,  # Giới hạn độ dài response
-            num_return_sequences=1,
-            temperature=0.7,  # Điều chỉnh creativity
+            max_length=1000, 
+            temperature=0.7, 
             do_sample=True
         )
         
